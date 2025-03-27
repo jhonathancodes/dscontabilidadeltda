@@ -6,7 +6,7 @@ function HowItWorks() {
     return (
         <section className="how-it-works">
             <div className="services-header">
-                <h2>Como Funciona</h2>
+                <h2 id="consultoria">Como Funciona</h2>
                 <p>Nosso processo é simples e eficiente. Veja como podemos ajudar o seu negócio a crescer com nossa consultoria contábil.</p>
             </div>
             <div className="services-cards">

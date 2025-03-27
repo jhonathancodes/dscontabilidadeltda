@@ -23,7 +23,7 @@ function Nav() {
                 <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#servicos">Serviços</a></li>
                 <li><a href="#consulta">Consulta</a></li>
-                <li><a href="#depoimentos">Depoimentos</a></li>
+                <li><a href="#consultoria">Consultoria</a></li>
                 <li><a href="#duvidas">Dúvidas</a></li>
                 <li><a href="#contato">Contato</a></li>
                 <div className="nav-icons-mobile"> {/* Ícones para mobile */}
