@@ -1,0 +1,122 @@
+/* Nav.css */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #212842;
+    padding: 15px 30px;
+    position: fixed; /* Fixa a barra de navegação no topo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Garante que a navbar fique por cima do conteúdo */
+}
+
+.nav-logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    z-index: 1000; /* Garante que o menu tenha um z-index maior que o conteúdo */
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    font-family: ui-serif, Georgia, Cambria, Times New Roman, Times, serif; 
+    font-weight: 300;
+}
+
+.nav-links li a:hover {
+    color: #d4af37;
+}   
+
+.nav-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-icons a {
+    color: white;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.nav-icons a:hover {
+    color: #d4af37;
+}
+
+.menu-icon {
+    display: none;
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+    z-index: 1001; /* Garante que o ícone do menu fique acima do conteúdo */
+}
+
+.nav-icons-mobile {
+    display: none;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #212842;
+        text-align: center;
+        padding: 15px 0;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-100%);
+        transition: transform 0.4s ease-in-out, opacity 0.3s ease-in-out;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+        flex-direction: column; /* Links um embaixo do outro */
+        gap: 10px; /* Adiciona espaço entre os links */
+        z-index: 1000; /* Garante que o menu fiquem acima do conteúdo */
+    }
+
+    .nav-links.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav-links li {
+        margin: 0; /* Remove margens extras dos links */
+    }
+
+    .nav-icons-mobile {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+        gap: 15px;
+    }
+
+    .nav-icons-mobile a {
+        color: white;
+        font-size: 1.5rem;
+        transition: color 0.3s ease;
+    }
+
+    .nav-icons-mobile a:hover {
+        color: #d4af37;
+    }
+
+    .nav-icons {
+        display: none;
+    }
+}

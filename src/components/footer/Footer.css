@@ -1,0 +1,117 @@
+.section__padding {
+  padding: 4rem 4rem;
+  font-family: ui-serif, Georgia, Cambria, Times New Roman, Times, serif; 
+}
+
+.footer {
+  background-color: #212842;
+}
+
+.sb__footer {
+  display: flex;
+  flex-direction: column;
+}
+
+.sb__footer-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.sb__footer-links_div {
+  width: 150px;
+  margin: 1rem;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  color: white;
+}
+
+/* Agrupando "Company" e "Coming Soon" lado a lado */
+.sb__footer-links_group {
+  display: flex;
+  gap: 50px;
+}
+
+/* Estilizando os ícones */
+.socialmedia {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+
+
+.icon {
+  font-size: 24px;
+  color: white;
+}
+
+.icon:hover {
+  color: #d4af37;
+}
+
+a {
+  color: rgb(175, 175, 179);
+  text-decoration: none;
+}
+
+.sb__footer-links_div h4 {
+  font-size: 14px;
+  line-height: 17px;
+  margin-bottom: 0.9rem;
+}
+
+.sb__footer-links_div p {
+  font-size: 12px;
+  line-height: 15px;
+  margin: 0.5rem 0;
+  cursor: pointer;
+}
+
+.sb__footer-below {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.2rem;
+}
+
+
+hr {
+  color: white !important;
+  width: 100%;
+}
+
+.sb_footer-copyright p {
+  font-size: 13px;
+  line-height: 15px;
+  color: white;
+  font-weight: 300;
+  padding-top: 10px;
+}
+
+/* Responsividade */
+@media screen and (max-width: 850px) {
+  .sb__footer-links_group {
+    flex-direction: column;
+    align-items: center; /* Centraliza os itens no eixo horizontal */
+  }
+
+  .sb__footer-links_div {
+    text-align: center; /* Centraliza o texto dentro da div */
+  }
+
+  .socialmedia {
+    justify-content: center; /* Centraliza os ícones de mídia social */
+  }
+}
+@media screen and (max-width: 550px) {
+  .sb__footer-below {
+    flex-direction: column;
+  }
+
+
+}

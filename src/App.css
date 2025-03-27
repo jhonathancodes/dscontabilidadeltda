@@ -1,0 +1,24 @@
+/* App.css - Estilos globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+  }
+  
+  #root {
+    width: 100%;
+    min-height: 100vh;
+  }
+  
+  .navbar {
+    width: 100%;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }

@@ -1,0 +1,74 @@
+.testimonial {
+    background-color: #f8f8f8;
+    padding: 50px 10%;
+    text-align: center;
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+    border-bottom: 2px solid #dcdcdc;
+}
+
+
+.testimonial-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Três colunas */
+    gap: 20px; /* Espaçamento entre os depoimentos */
+    position: absolute;
+    bottom: 20%; /* Ajustado para ficar logo abaixo do título */
+    width: 100%;
+    max-width: 1200px; /* Define uma largura máxima para a seção */
+    left: 5%; /* Move a seção mais para a esquerda */
+    animation: moveUp 30s linear infinite; /* Animação contínua */
+}
+
+.testimonial-card {
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo transparente */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 1; /* Mantém os cards visíveis */
+    transform: translateY(0); /* Sem deslocamento inicial */
+}
+
+/* Estrelas de avaliação */
+.rating {
+    margin-bottom: 15px;
+}
+
+.star {
+    color: #FFD700;
+    font-size: 1.5rem;
+}
+
+/* Feedback do cliente */
+.client-feedback {
+    font-size: 1rem;
+    font-style: italic;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* Nome do cliente */
+.client-name {
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+/* Animação para o movimento dos depoimentos (looping contínuo) */
+@keyframes moveUp {
+    0% {
+        bottom: -100%; /* Começar fora da tela */
+    }
+    10% {
+        bottom: 20%; /* Mover para a posição logo abaixo do título */
+    }
+    90% {
+        bottom: 20%; /* Manter na posição final por um tempo */
+    }
+    100% {
+        bottom: 100%; /* Mover para fora da tela novamente */
+    }
+}

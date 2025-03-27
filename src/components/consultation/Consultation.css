@@ -1,0 +1,113 @@
+/* Estilos para a seção Consulta */
+.consultation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 10%;
+    background-color: #212842;
+    border-bottom: 2px solid #dcdcdc; 
+    margin-bottom: 50px;
+}
+
+/* Container para alinhar imagem e texto */
+.consultation-content {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    gap: 40px;
+}
+
+/* Estilização da imagem */
+.consultation-image {
+    width: 50%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Container do texto */
+.consultation-text {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+/* Título */
+.consultation-text h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    text-align: center;
+    font-family: ui-serif, Georgia, Cambria, Times New Roman, Times, serif;
+    font-weight: 300;
+
+}
+
+
+.consultation-text p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: justify;
+    font-family: ui-serif, Georgia, Cambria, Times New Roman, Times, serif;
+}
+
+
+.consultation-button {
+    background-color: #c8a05a;
+    color: white;
+    padding: 10px 15px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: background 0.3s ease;
+    width: 100%; /* Faz o botão ocupar toda a largura do container */
+    max-width: 600px; /* Mantém o limite proporcional ao texto */
+    justify-content: center;
+}
+
+/* Centraliza o botão no container */
+.consultation-button-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+/* Efeito hover no botão */
+.consultation-button:hover {
+    background-color: #b39e2f;
+}
+
+/* Ícone do botão */
+.consultation-button svg {
+    font-size: 1.5rem;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+    .consultation-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .consultation-image {
+        width: 100%;
+    }
+
+    .consultation-text {
+        width: 100%;
+        align-items: center;
+    }
+
+    .consultation-text p {
+        text-align: center; /* Ajusta a justificação para telas menores */
+    }
+}

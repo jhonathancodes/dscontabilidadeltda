@@ -1,0 +1,80 @@
+/* Estilos para a seção Nossa História */
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 10%; /* Aumentando o padding */
+    background-color: #f8f8f8;
+    border-bottom: 2px solid #dcdcdc; 
+    margin-bottom: 50px; /* Margem inferior para separar das próximas seções */
+}
+
+/* Container para alinhar imagem e texto */
+.header-content {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    gap: 40px;
+}
+
+/* Estilização da imagem da equipe */
+.team-image {
+    width: 50%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Container do texto e logo */
+.header-text {
+    width: 50%;
+    text-align: center; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Título */
+.header-text h2 {
+    font-size: 2rem;
+    color:#011e41;
+    margin-bottom: 0px; 
+    display: flex;
+    align-items: center;
+    font-family: ui-serif, Georgia, Cambria, Times New Roman, Times, serif;
+    font-weight: 300; /* Deixa o título mais fino */
+}
+
+/* Estilização da logo  */
+.company-logo {
+    height: 2rem; 
+    width: auto;
+    margin: 0; 
+}
+
+/* Texto */
+.header-text p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #666;
+    font-family: ui-serif, Georgia, Cambria, Times New Roman, Times, serif;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .team-image {
+        width: 100%;
+    }
+
+    .header-text {
+        width: 100%;
+        align-items: center;
+    }
+}
