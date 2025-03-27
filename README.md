@@ -1,12 +1,27 @@
-# React + Vite
+# Consultoria Contábil
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este é um projeto de uma aplicação de consultoria contábil desenvolvida com **React** e **Vite**. A aplicação oferece informações sobre como os serviços funcionam e permite que os usuários entrem em contato via WhatsApp para agendar uma consulta personalizada.
 
-Currently, two official plugins are available:
+## Tecnologias
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React**: Biblioteca JavaScript para construir interfaces de usuário.
+- **Vite**: Ferramenta de build rápida para desenvolvimento frontend.
+- **React Icons**: Ícones para a interface.
+- **React Router**: Gerenciamento de navegação entre páginas (se aplicável).
+- **Font Awesome**: Para os ícones usados na interface.
+- **CSS Flexbox**: Para o layout responsivo e flexível.
 
-## Expanding the ESLint configuration
+## Funcionalidades
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Seção "Como Funciona" com explicações sobre os serviços.
+- Cards informativos que descrevem o processo de consultoria contábil.
+- Seção de consulta, onde os usuários podem clicar em um botão para iniciar uma conversa via WhatsApp.
+- Layout responsivo que se adapta a diferentes tamanhos de tela, incluindo smartphones.
+
+## Como rodar o projeto localmente
+
+Para rodar o projeto localmente, siga os seguintes passos:
+
+1. Clone este repositório:
+   ```bash
+   git clone https://github.com/username/consultoria-contabil.git

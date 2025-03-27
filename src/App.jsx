@@ -3,8 +3,7 @@ import Home from './components/home/Home.jsx';
 import Header from './components/header/Header.jsx';
 import Service from './components/services/Service.jsx';
 import Consultation from './components/consultation/Consultation.jsx';
-import Testimonial from './components/testimonial/Testimonial.jsx';
-import Tittle from './components/testimonialtittle/Tittle.jsx';
+import HowItWorks from './components/howItworks/HowItWorks.jsx';
 import Question from './components/questions/Question.jsx';
 import Footer from './components/footer/Footer.jsx';
 
@@ -18,8 +17,7 @@ function App() {
         <Header />
         <Service />
         <Consultation />
-        <Tittle />
-        <Testimonial />
+        <HowItWorks />
         <Question />
         <Footer />
     </div>

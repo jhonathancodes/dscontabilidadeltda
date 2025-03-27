@@ -1,11 +1,10 @@
 import "./Home.css";
 import { FaWhatsapp } from "react-icons/fa"; // Importando o ícone do WhatsApp
 
-
 function Home() {
     return (
         <section id="home" className="home">
-            <video autoPlay loop muted className="background-video">
+            <video autoPlay loop muted playsInline className="background-video">
                 <source src="./assets/finance-work.mp4" type="video/mp4" />
                 Seu navegador não suporta vídeos.
             </video>

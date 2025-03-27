@@ -108,10 +108,23 @@ hr {
     justify-content: center; /* Centraliza os ícones de mídia social */
   }
 }
+
 @media screen and (max-width: 550px) {
   .sb__footer-below {
     flex-direction: column;
   }
 
+  /* Aqui você força a exibição lado a lado para telas menores (abaixo de 488px) */
+  .sb__footer-links {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+  }
 
+  .sb__footer-links_group {
+    flex-direction: row; /* Coloca os itens lado a lado */
+    gap: 10px; /* Espaço entre os itens */
+    align-items: center; /* Centraliza os itens verticalmente */
+  }
 }

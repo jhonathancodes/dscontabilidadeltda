@@ -1,0 +1,114 @@
+/* Estilos para a seção de Como Funciona */
+.how-it-works {
+    padding: 60px 10%;
+    background-color: #f8f8f8;
+    text-align: center;
+    border-bottom: 2px solid #dcdcdc; /* Linha cinza */
+}
+
+/* Título da seção de Como Funciona */
+.services-header h2 {
+    font-size: 2.5rem;
+    color: #011e41;
+    margin-bottom: 15px;
+    font-family: ui-serif, Georgia, Cambria, Times New Roman, Times, serif;
+    font-weight: 300; /* Deixa o título mais fino */
+}
+
+/* Texto explicativo */
+.services-header p {
+    font-size: 1.2rem;
+    color: #666;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    font-family: ui-serif, Georgia, Cambria, Times New Roman, Times, serif;
+}
+
+/* Container dos cards */
+.services-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+/* Estilo de cada card */
+.service-card {
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #c8a05a;
+    padding: 30px;
+    width: 280px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px); /* Efeito de hover */
+}
+
+/* Ícones dos cards */
+.service-icon {
+    font-size: 3rem;
+    color: #d4af37;
+    margin-bottom: 15px;
+}
+
+/* Títulos dentro dos cards */
+.service-card h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Descrição dos serviços */
+.service-card p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Botão de chamada para ação */
+.cta-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.cta-button {
+    background-color: #c8a05a;
+    color: white;
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: background 0.3s ease;
+    max-width: 600px;
+    width: 100%;
+    justify-content: center;
+}
+
+.cta-button:hover {
+    background-color: #b39e2f;
+}
+
+.cta-button svg {
+    font-size: 1.5rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .services-cards {
+        justify-content: center;
+    }
+
+    .service-card {
+        width: 90%;
+        margin-bottom: 30px;
+    }
+}
