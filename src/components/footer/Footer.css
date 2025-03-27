@@ -109,22 +109,39 @@ hr {
   }
 }
 
-@media screen and (max-width: 550px) {
-  .sb__footer-below {
-    flex-direction: column;
-  }
-
-  /* Aqui você força a exibição lado a lado para telas menores (abaixo de 488px) */
+@media screen and (max-width: 488px) {
+  /* Centralizar todos os itens */
   .sb__footer-links {
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    width: 100%;
+    flex-direction: column; /* Muda de linha para coluna */
+    align-items: center; /* Centraliza no eixo horizontal */
+    width: 100%; /* Garante que ocupe toda a largura da tela */
   }
 
-  .sb__footer-links_group {
-    flex-direction: row; /* Coloca os itens lado a lado */
-    gap: 10px; /* Espaço entre os itens */
-    align-items: center; /* Centraliza os itens verticalmente */
+  .sb__footer-links_div {
+    text-align: center; /* Centraliza o texto dentro da div */
+    width: auto; /* Garante que os itens tenham largura automática */
+    margin: 1rem 0; /* Garante espaçamento vertical entre os itens */
+  }
+
+  /* Para a parte do footer de baixo */
+  .sb_footer-below {
+    flex-direction: column; /* Coloca os itens em coluna */
+    align-items: center; /* Centraliza os itens no eixo horizontal */
+  }
+
+  /* Para os ícones de redes sociais */
+  .socialmedia {
+    justify-content: center; /* Centraliza os ícones */
+    gap: 20px; /* Ajusta o espaço entre os ícones */
+  }
+
+  .icon {
+    font-size: 28px; /* Aumenta o tamanho dos ícones */
+  }
+
+  /* Ajuste para o copyright */
+  .sb_footer-copyright p {
+    text-align: center; /* Centraliza o texto */
   }
 }

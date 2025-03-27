@@ -18,25 +18,27 @@ function Question() {
 
     return (
         <section className="question">
-    <div className="question-header">
-        <span id="duvidas" className="subtitle">FAQs</span>
-        <h2>Dúvidas Frequentes</h2>
-    </div>
-    <div className="question-container">
-        {questions.map((item, index) => (
-            <div key={index} className={`question-item ${openIndex === index ? "active" : ""}`}>
-                <div className="question-title" onClick={() => toggleQuestion(index)}>
-                    <h3>{item.question}</h3>
-                    <span className="toggle-icon">{openIndex === index ? "−" : "+"}</span>
-                </div>
-                <div className="question-answer" style={{ maxHeight: openIndex === index ? "100px" : "0px", opacity: openIndex === index ? "1" : "0" }}>
-                    <p>{item.answer}</p>
-                </div>
+            <div className="question-header">
+                <span id="duvidas" className="subtitle">FAQs</span>
+                <h2>Dúvidas Frequentes</h2>
             </div>
-        ))}
-    </div>
-</section>
-
+            <div className="question-container">
+                {questions.map((item, index) => (
+                    <div key={index} className={`question-item ${openIndex === index ? "active" : ""}`}>
+                        <div className="question-title" onClick={() => toggleQuestion(index)}>
+                            <h3>{item.question}</h3>
+                            <span className="toggle-icon">{openIndex === index ? "−" : "+"}</span>
+                        </div>
+                        <div className="question-answer" style={{ 
+                            maxHeight: openIndex === index ? "500px" : "0px", /* Aumentando o tamanho do card quando aberto */
+                            opacity: openIndex === index ? "1" : "0" 
+                        }}>
+                            <p>{item.answer}</p>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </section>
     );
 }
 
