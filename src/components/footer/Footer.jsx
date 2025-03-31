@@ -60,7 +60,7 @@ const Footer = () => {
         <hr />
         <div className="sb_footer-below">
           <div className="sb_footer-copyright">
-            <p>@{new Date().getFullYear()} DS Consultoria e Contabilidade. | CNPJ: 27.341.798/0001-91</p>
+            <p>©{new Date().getFullYear()} DS Consultoria e Contabilidade. | CNPJ: 27.341.798/0001-91</p>
           </div>
         </div>
       </div>
