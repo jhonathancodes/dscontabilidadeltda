@@ -30,7 +30,7 @@ function Question() {
                             <span className="toggle-icon">{openIndex === index ? "−" : "+"}</span>
                         </div>
                         <div className="question-answer" style={{ 
-                            maxHeight: openIndex === index ? "500px" : "0px", /* Aumentando o tamanho do card quando aberto */
+                            maxHeight: openIndex === index ? "500px" : "0px", 
                             opacity: openIndex === index ? "1" : "0" 
                         }}>
                             <p>{item.answer}</p>
