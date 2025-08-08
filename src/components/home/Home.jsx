@@ -1,5 +1,5 @@
 import "./Home.css";
-import { FaWhatsapp } from "react-icons/fa"; // Importando o ícone do WhatsApp
+import { FaWhatsapp } from "react-icons/fa"; 
 
 function Home() {
     return (
