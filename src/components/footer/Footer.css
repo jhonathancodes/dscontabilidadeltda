@@ -31,13 +31,13 @@
   color: white;
 }
 
-/* Agrupando "Company" e "Coming Soon" lado a lado */
+
 .sb__footer-links_group {
   display: flex;
   gap: 50px;
 }
 
-/* Estilizando os ícones */
+
 .socialmedia {
   display: flex;
   gap: 10px;
@@ -93,55 +93,55 @@ hr {
   padding-top: 10px;
 }
 
-/* Responsividade */
+
 @media screen and (max-width: 850px) {
   .sb__footer-links_group {
     flex-direction: column;
-    align-items: center; /* Centraliza os itens no eixo horizontal */
+    align-items: center; 
   }
 
   .sb__footer-links_div {
-    text-align: center; /* Centraliza o texto dentro da div */
+    text-align: center; 
   }
 
   .socialmedia {
-    justify-content: center; /* Centraliza os ícones de mídia social */
+    justify-content: center;
   }
 }
 
 @media screen and (max-width: 488px) {
-  /* Centralizar todos os itens */
+
   .sb__footer-links {
     display: flex;
-    flex-direction: column; /* Muda de linha para coluna */
-    align-items: center; /* Centraliza no eixo horizontal */
-    width: 100%; /* Garante que ocupe toda a largura da tela */
+    flex-direction: column; 
+    align-items: center; 
+    width: 100%; 
   }
 
   .sb__footer-links_div {
-    text-align: center; /* Centraliza o texto dentro da div */
-    width: auto; /* Garante que os itens tenham largura automática */
-    margin: 1rem 0; /* Garante espaçamento vertical entre os itens */
+    text-align: center; 
+    width: auto; 
+    margin: 1rem 0; 
   }
 
-  /* Para a parte do footer de baixo */
+  
   .sb_footer-below {
-    flex-direction: column; /* Coloca os itens em coluna */
-    align-items: center; /* Centraliza os itens no eixo horizontal */
+    flex-direction: column; 
+    align-items: center; 
   }
 
-  /* Para os ícones de redes sociais */
+
   .socialmedia {
-    justify-content: center; /* Centraliza os ícones */
-    gap: 20px; /* Ajusta o espaço entre os ícones */
+    justify-content: center; 
+    gap: 20px; 
   }
 
   .icon {
-    font-size: 28px; /* Aumenta o tamanho dos ícones */
+    font-size: 28px; 
   }
 
-  /* Ajuste para o copyright */
+  
   .sb_footer-copyright p {
-    text-align: center; /* Centraliza o texto */
+    text-align: center; 
   }
 }
