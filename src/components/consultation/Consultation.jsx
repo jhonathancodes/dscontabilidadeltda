@@ -1,6 +1,6 @@
 import "./Consultation.css";
-import profile from "../../assets/profile.jpg"; // Imagem da seção
-import { FaWhatsapp } from "react-icons/fa"; // Ícone do WhatsApp
+import profile from "../../assets/profile.jpg"; 
+import { FaWhatsapp } from "react-icons/fa"; 
 
 function Consultation() {
     return (
