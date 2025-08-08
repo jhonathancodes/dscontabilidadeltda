@@ -1,4 +1,4 @@
-/* FAQ Section */
+
 .question {
     padding: 100px 5%;
     background-color: var(--dark-background);
@@ -14,7 +14,7 @@
     border-radius: 8px;
     margin-bottom: 1rem;
     overflow: hidden;
-    transition: max-height 0.3s ease-in-out; /* Transição suave */
+    transition: max-height 0.3s ease-in-out; 
 }
 
 .question-header {
@@ -38,7 +38,7 @@
     margin: 0;
     color: #212842;
     font-family: ui-serif, Georgia, Cambria, Times New Roman, Times, serif;
-    font-weight: 300; /* Deixa o título mais fino */
+    font-weight: 300; 
 }
 
 .question-title {
@@ -77,8 +77,8 @@
     transition: all 0.3s ease-in-out;
     overflow: hidden;
     background-color: #212842;
-    max-height: 0px; /* Inicialmente, o conteúdo é escondido */
-    opacity: 0; /* Inicialmente, o conteúdo é invisível */
+    max-height: 0px; 
+    opacity: 0;
 }
 
 .question-answer p {
@@ -125,7 +125,7 @@
     }
 
     .question-answer {
-        padding: 0 1rem; /* Reduz o padding da resposta */
+        padding: 0 1rem; 
     }
 
     .question-answer p {
