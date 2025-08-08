@@ -1,6 +1,6 @@
 import "./Header.css";
-import equipe from "../../assets/equipe.jpg"; // Caminho correto da imagem da equipe
-import cont from "../../assets/cont.webp"; // Caminho correto da logo
+import equipe from "../../assets/equipe.jpg"; 
+import cont from "../../assets/cont.webp"; 
 
 function Header() {
     return (
