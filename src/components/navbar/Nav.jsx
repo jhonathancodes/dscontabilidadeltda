@@ -1,47 +1,98 @@
-import "./Nav.css";
-import logo from "../../assets/logo.jpg";
+import React, { useState, useEffect } from "react";
 import { FaInstagram, FaWhatsapp, FaBars, FaTimes } from "react-icons/fa";
-import { useState } from "react";
-
+import logo from "../../assets/logo.jpg";
+import './Nav.css';
 function Nav() {
     const [menuAberto, setMenuAberto] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
 
     const toggleMenu = () => {
         setMenuAberto(!menuAberto);
     };
 
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsScrolled(window.scrollY > 20);
+        };
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
+    const navLinks = [
+        { href: "#home", label: "Home" },
+        { href: "#sobre", label: "Sobre" },
+        { href: "#servicos", label: "Serviços" },
+        { href: "#consulta", label: "Consulta" },
+        { href: "#consultoria", label: "Consultoria" },
+        { href: "#duvidas", label: "Dúvidas" },
+        { href: "#contato", label: "Contato" }
+    ];
+
     return (
-        <nav className="navbar">
-            <div className="nav-logo">
-                <img src={logo} alt="Logo da Consultoria" />
-            </div>
-            <div className="menu-icon" onClick={toggleMenu}>
-                {menuAberto ? <FaTimes /> : <FaBars />}
-            </div>
-            <ul className={`nav-links ${menuAberto ? "active" : ""}`}>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#consulta">Consulta</a></li>
-                <li><a href="#consultoria">Consultoria</a></li>
-                <li><a href="#duvidas">Dúvidas</a></li>
-                <li><a href="#contato">Contato</a></li>
-                <div className="nav-icons-mobile"> {/* Ícones para mobile */}
-                    <a href="https://www.instagram.com/dsconsultoriacontabilidade?igsh=enp2ZTk0cjZpNmNy" target="_blank" rel="noopener noreferrer">
-                        <FaInstagram />
-                    </a>
-                    <a href="https://wa.me/557781075231?text=Ol%C3%A1!%20Tenho%20interesse%20nos%20servi%C3%A7os%20de%20consultoria%20e%20contabilidade%20oferecidos%20pela%20DS%20Consultoria%20e%20Contabilidade.%20Poderia%20fornecer%20mais%20informa%C3%A7%C3%B5es%3F%0A" target="_blank" rel="noopener noreferrer">
-                        <FaWhatsapp />
-                    </a>
+        <nav className={`navbar ${isScrolled ? 'navbar-scrolled' : ''}`}>
+            <div className="nav-container">
+                <div className="nav-logo">
+                    <img src={logo} alt="DS Consultoria e Contabilidade" />
+                    <span className="logo-text">DS Consultoria</span>
                 </div>
-            </ul>
-            <div className="nav-icons"> {/* Ícones para desktop */}
-                <a href="https://www.instagram.com/dsconsultoriacontabilidade?igsh=enp2ZTk0cjZpNmNy" target="_blank" rel="noopener noreferrer">
-                    <FaInstagram />
-                </a>
-                <a href="https://wa.me/557781075231?text=Ol%C3%A1!%20Tenho%20interesse%20nos%20servi%C3%A7os%20de%20consultoria%20e%20contabilidade%20oferecidos%20pela%20DS%20Consultoria%20e%20Contabilidade.%20Poderia%20fornecer%20mais%20informa%C3%A7%C3%B5es%3F%0A" target="_blank" rel="noopener noreferrer">
-                    <FaWhatsapp />
-                </a>
+                
+                <div className="nav-center">
+                    <ul className={`nav-links ${menuAberto ? "nav-links-active" : ""}`}>
+                        {navLinks.map((link, index) => (
+                            <li key={index} className="nav-item">
+                                <a 
+                                    href={link.href} 
+                                    className="nav-link"
+                                    onClick={() => setMenuAberto(false)}
+                                >
+                                    {link.label}
+                                    <span className="nav-link-underline"></span>
+                                </a>
+                            </li>
+                        ))}
+                        <div className="nav-icons-mobile">
+                            <a href="https://www.instagram.com/dsconsultoriacontabilidade?igsh=enp2ZTk0cjZpNmNy" 
+                               target="_blank" 
+                               rel="noopener noreferrer"
+                               className="social-icon">
+                                <FaInstagram />
+                            </a>
+                            <a href="https://wa.me/557781075231?text=Ol%C3%A1!%20Tenho%20interesse%20nos%20servi%C3%A7os%20de%20consultoria%20e%20contabilidade%20oferecidos%20pela%20DS%20Consultoria%20e%20Contabilidade.%20Poderia%20fornecer%20mais%20informa%C3%A7%C3%B5es%3F%0A" 
+                               target="_blank" 
+                               rel="noopener noreferrer"
+                               className="social-icon">
+                                <FaWhatsapp />
+                            </a>
+                        </div>
+                    </ul>
+                </div>
+
+                <div className="nav-right">
+                    <div className="nav-icons">
+                        <a href="https://www.instagram.com/dsconsultoriacontabilidade?igsh=enp2ZTk0cjZpNmNy" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           className="social-icon">
+                            <FaInstagram />
+                        </a>
+                        <a href="https://wa.me/557781075231?text=Ol%C3%A1!%20Tenho%20interesse%20nos%20servi%C3%A7os%20de%20consultoria%20e%20contabilidade%20oferecidos%20pela%20DS%20Consultoria%20e%20Contabilidade.%20Poderia%20fornecer%20mais%20informa%C3%A7%C3%B5es%3F%0A" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           className="social-icon">
+                            <FaWhatsapp />
+                        </a>
+                    </div>
+                    
+                    <button 
+                        className={`menu-toggle ${menuAberto ? 'menu-toggle-active' : ''}`}
+                        onClick={toggleMenu}
+                        aria-label="Toggle menu"
+                    >
+                        <span className="hamburger-line"></span>
+                        <span className="hamburger-line"></span>
+                        <span className="hamburger-line"></span>
+                    </button>
+                </div>
             </div>
         </nav>
     );
