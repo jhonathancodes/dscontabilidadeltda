@@ -180,6 +180,27 @@
   .consultation-content { grid-template-columns: 1fr; gap: 50px; text-align: center; }
   .consultation-image-wrapper, .consultation-text { transform: none; }
   .consultation-title-wrapper, .trust-indicators { text-align: center; justify-content: center; }
+  
+  .consultation-cta { 
+    align-items: center; 
+    text-align: center; 
+  }
+  
+  .consultation-button {
+    margin: 0 auto;
+    align-self: center;
+  }
+  
+  .consultation-trust { 
+    justify-content: center; 
+    width: 100%;
+  }
+  
+  .trust-indicators { 
+    justify-content: center; 
+    align-items: center;
+    width: 100%;
+  }
 }
 @media (max-width:640px) {
   .consultation { padding: 50px 0; margin-bottom: 30px; }
@@ -188,8 +209,51 @@
   .consultation-features { gap: 12px; }
   .feature-item { padding: 12px 0; }
   .feature-icon { width: 40px; height: 40px; font-size: 1rem; }
-  .consultation-button { padding: 12px 24px; min-width: 240px; font-size: .95rem; }
-  .trust-indicators { gap: 24px; }
+  .consultation-button { 
+    padding: 12px 24px; 
+    min-width: 240px; 
+    font-size: .95rem;
+    margin: 0 auto;
+    align-self: center;
+  }
+  .trust-indicators { 
+    gap: 24px; 
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  
+  /* Garantir centralização em telas muito pequenas */
+  .consultation-cta { 
+    align-items: center; 
+    text-align: center; 
+    width: 100%;
+  }
+  
+  .consultation-trust { 
+    justify-content: center; 
+    width: 100%;
+    display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  .consultation-button {
+    min-width: 200px;
+    width: fit-content;
+    margin: 0 auto;
+  }
+  
+  .trust-indicators {
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+  }
+  
+  .trust-item {
+    width: 100%;
+    align-items: center;
+  }
 }
 
 /* Accessibility */
